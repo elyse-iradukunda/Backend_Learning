@@ -10,6 +10,6 @@
     "sequelize": "^6.37.8"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   }
 }
