@@ -1,23 +1,12 @@
-import express from "express";
+import mongoose from "mongoose";
+import express from "express"
 
-const app = express();
-const PORT = 3000;
-
-app.use(express.json());
-
-const users = [];
-
-app.post("/users", (req, res) => {
-  const newUser = {
-    id: users.length + 1,
-    userName: req.body.userName
-  };
-
-  users.push(newUser);
-
-  res.json(newUser);
-});
-
-app.listen(PORT, () => {
-  console.log("Hello this the app is running on Port", PORT);
-});
+const db = "mongodb+srv://nodeJsLearning:Irael.com1@nodejslearning.hfqbcvz.mongodb.net/testdb?retryWrites=true&w=majority";
+mongoose.connect(db)
+  .then(() => {
+    console.log("MongoDB connection SUCCESS ✅");
+  })
+  .catch((err) => {
+    console.log("MongoDB connection FAILED ❌");
+    console.log(err.message);
+  }); 
