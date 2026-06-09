@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 export const  users = new Schema({
-    useId: {
+    userId: {
         type: Number,
         required: true,
     },
@@ -11,3 +11,8 @@ export const  users = new Schema({
    
 
 }, { timestamps: true })
+
+
+const User = mongoose.model("User", users)
+
+export default User
