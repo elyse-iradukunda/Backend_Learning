@@ -12,5 +12,9 @@ app.use('/user', UserRouter);
 app.use('/user', getAllUsers)
 app.use('/user/:id', deleteRecord)
 app.use('/user/id', updateRecord)
+app.get('/', (req,res) => {
+    ``
+    res.render('index', { message:'hello this is the ejs file loaded'})
+})
 
 export default app
