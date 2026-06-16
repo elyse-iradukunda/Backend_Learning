@@ -12,6 +12,6 @@
     "sequelize": "^6.37.8"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node api.js && nodemon index.js"
   }
 }
